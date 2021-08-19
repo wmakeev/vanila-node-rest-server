@@ -22,7 +22,6 @@ const server = http.createServer(async (req, res) => {
       }
 
       case req.method === 'POST' && req.url === '/api/registration': {
-      // get the data sent along
         const data = await getReqData(req)
 
         const registration = await controller.addRegistration(JSON.parse(data))
